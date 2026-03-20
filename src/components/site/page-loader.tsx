@@ -1,11 +1,10 @@
 'use client';
 
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export function PageLoader() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -71,7 +70,7 @@ export function PageLoader() {
     }, 280);
 
     return () => clearTimeout(timeout);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <div
