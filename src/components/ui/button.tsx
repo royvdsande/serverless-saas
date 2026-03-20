@@ -11,7 +11,7 @@ type ButtonProps = {
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  default: 'bg-black text-white hover:bg-gray-900',
+  default: 'bg-black text-white hover:bg-gray-900 [&_*]:text-current',
   outline: 'border border-gray-200 bg-white text-black hover:bg-gray-50',
   ghost: 'bg-transparent text-black hover:bg-gray-100',
   secondary: 'bg-gray-100 text-black hover:bg-gray-200',
